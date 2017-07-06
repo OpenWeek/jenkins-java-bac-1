@@ -15,7 +15,7 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-#   Ce script lance tous les tests de conformité de la pull request.
+#   This script checks the pull requests
 
 cd tasks
 LIST=$(ls)
