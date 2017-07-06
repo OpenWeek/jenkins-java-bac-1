@@ -17,36 +17,36 @@
 
 #   This script checks the pull requests
 
-cd tasks
+cd Tasks
 LIST=$(ls)
 REP=0
 
 for d in $LIST
 do
-	#   On vérifie que le nom de la tâche correspond à la nomenclature
+	#   Let's check if the name of the task corresponds to the nomenclature
 	NOMS=$(echo $d | sed "/M[0-9][0-9]Q[0-9][0-9]_[A-Z].*/d")
 	if [ ! -z "$NOMS" ]; then
 		REP=1
-		echo -e "\nLe nom de dossier suivant ne correspond pas à la nomenclature de nomage : "
+		echo -e "\nThe name of de following folder does not correspond to the nomenclature: "
 		echo $NOMS
 	else
 		CODE=$(echo $d | sed "s/_.*//g")
 		TYPE=$(grep environment: $d/task.yaml | sed 's/environment://g' | sed 's/ //g')
 		if [ "$TYPE" != "mcq" ]; then
-			#   On vérifie que les noms des fichiers correspondent à la nomenclature
+			#   Let's check if the names of the files correspond to the nomenclature
 		
 			if [ ! -d "$d/student" ]; then
-				echo "absence du dossier student dans $d"
+				echo "missing student folder in $d"
 				REP=1
 			fi
 			for c in "$d/config.json" "$d/run" "$d/task.yaml" "$d/student/$CODE.java" "$d/student/"$CODE"Vide.java" "$d/student/"$CODE"Corr.java"
 			do
 				if [ ! -f "$c" ]; then
-					echo "absence du fichier $c"
+					echo "missing file $c"
 					REP=1
 				fi
 			done
-			#   On vérifie la présence de tous les éléments dans le config.json (voir script.py)
+			#   Let's check if all attributes are in config.json file (cfr script.py)
 			if [ -f "$d/config.json" ]; then
 				cd $d
 				../../script.py
@@ -54,13 +54,13 @@ do
 				REP=$(($REP+$?))	
 			fi
 			
-			#   On vérifie que le fichier run n'a pas été modifié
+			#   Let's check if there is no change to the run file
 			DIF=$(diff $d/run ../template/\{exercice\}/run) 
 			if [ ! $? == 0 ]; then
 				REP=$(($REP+$?))
-				echo -e "\n\nMODIFICATION DU RUN DE $d\n\n"
+				echo -e "\n\nMODIFICATION OF RUN FILE OF $d\n\n"
 				echo "$DIF"
-				echo -e "\n\nFIN DES MODIFICATION\n\n"
+				echo -e "\n\nEND OF MODIFICATION\n\n"
 			fi
 		fi
 	fi
