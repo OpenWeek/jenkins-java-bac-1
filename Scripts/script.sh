@@ -27,13 +27,13 @@ do
 	NOMS=$(echo $d | sed "/M[0-9][0-9]Q[0-9][0-9]_[A-Z].*/d")
 	if [ ! -z "$NOMS" ]; then
 		REP=1
-		echo -e "\nThe name of de following folder does not correspond to the nomenclature: "
+		echo -e "\nThe name of the following folder does not correspond to the nomenclature: "
 		echo $NOMS
 	else
 		CODE=$(echo $d | sed "s/_.*//g")
 		TYPE=$(grep environment: $d/task.yaml | sed 's/environment://g' | sed 's/ //g')
 		if [ "$TYPE" != "mcq" ]; then
-			#   Let's check if the names of the files correspond to the nomenclature
+			#   Let's check if the name of the files corresponds to the nomenclature
 		
 			if [ ! -d "$d/student" ]; then
 				echo "missing student folder in $d"
