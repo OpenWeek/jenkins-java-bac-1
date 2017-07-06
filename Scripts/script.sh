@@ -65,4 +65,7 @@ do
 		fi
 	fi
 done
+if [ $REP==0 ]
+	echo "Your submission is OK !"
+fi
 exit $REP
