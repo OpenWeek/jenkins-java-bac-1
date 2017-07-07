@@ -49,14 +49,14 @@ do
 			#   Let's check if all attributes are in config.json file (cfr script.py)
 			if [ -f "$d/config.json" ]; then
 				cd $d
-				../../jenkins-java-bac-1/Scripts/script.py
+				python ../../jenkins-java-bac-1/Scripts/script.py
 				cd ..
 				REP=$(($REP+$?))	
 			fi
 			
 			#   Let's check if there is no change to the run file
 			DIF=$(diff $d/run ../template/\{exercice\}/run) 
-			if [ ! $? = 0 ]; then
+			if [ ! $? == 0 ]; then
 				REP=$(($REP+$?))
 				echo -e "\n\nMODIFICATION OF RUN FILE OF $d\n\n"
 				echo "$DIF"
