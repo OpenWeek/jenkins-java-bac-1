@@ -57,7 +57,7 @@ do
 			
 			#   Let's check if there is no change to the run file
 			DIF=$(diff $d/run ../Template/\{exercice\}/run) 
-			if [ ! $? == 0 ]; then
+			if [ ! $? -eq 0 ]; then
 				REP=$(($REP+$?))
 				echo -e "\n\nMODIFICATION OF RUN FILE OF $d\n\n"
 				echo "$DIF"
@@ -66,7 +66,7 @@ do
 		fi
 	fi
 done
-if [ $REP == 0 ]; then
+if [ $REP -eq 0 ]; then
 	echo "Your submission is OK !"
 fi
 exit $REP
