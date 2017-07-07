@@ -59,7 +59,7 @@ do
 			DIF=$(diff $d/run ../Template/\{exercice\}/run) 
 			if [ ! $? == 0 ]; then
 				REP=$(($REP+$?))
-				echo "\n\nMODIFICATION OF RUN FILE OF $d\n\n"
+				echo -e "\n\nMODIFICATION OF RUN FILE OF $d\n\n"
 				echo "$DIF"
 				echo -e "\n\nEND OF MODIFICATION\n\n"
 			fi
