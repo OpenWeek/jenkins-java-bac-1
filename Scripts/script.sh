@@ -59,7 +59,7 @@ do
 			DIF=$(diff $d/run ../Template/\{exercice\}/run) 
 			if [ ! $? -eq 0 ]; then
 				REP=$(($REP+$?))
-				echo "run fil changed in $d"
+				echo "run file changed in $d"
 			fi
 		fi
 	fi
