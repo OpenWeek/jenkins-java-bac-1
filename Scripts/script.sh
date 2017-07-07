@@ -56,7 +56,7 @@ do
 			fi
 			
 			#   Let's check if there is no change to the run file
-			DIF=$(diff $d/run ../template/\{exercice\}/run) 
+			DIF=$(diff $d/run ../Template/\{exercice\}/run) 
 			if [ ! $? == 0 ]; then
 				REP=$(($REP+$?))
 				echo -e "\n\nMODIFICATION OF RUN FILE OF $d\n\n"
