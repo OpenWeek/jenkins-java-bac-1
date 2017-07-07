@@ -51,8 +51,8 @@ do
 				cd $d
 				chmod +x ../../jenkins-java-bac-1/Scripts/script.py
 				../../jenkins-java-bac-1/Scripts/script.py
-				cd ..
-				REP=$(($REP+$?))	
+				REP=$(($REP+$?))
+				cd ..	
 			fi
 			
 			#   Let's check if there is no change to the run file
