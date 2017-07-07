@@ -49,7 +49,8 @@ do
 			#   Let's check if all attributes are in config.json file (cfr script.py)
 			if [ -f "$d/config.json" ]; then
 				cd $d
-				python ../../jenkins-java-bac-1/Scripts/script.py
+				chmod +x ../../jenkins-java-bac-1/Scripts/script.py
+				../../jenkins-java-bac-1/Scripts/script.py
 				cd ..
 				REP=$(($REP+$?))	
 			fi
