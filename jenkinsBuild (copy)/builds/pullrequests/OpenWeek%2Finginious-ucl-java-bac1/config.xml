@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.ghprb.GhprbRepository plugin="ghprb@1.38.0">
+  <reponame>OpenWeek/inginious-ucl-java-bac1</reponame>
+  <pullRequests class="concurrent-hash-map">
+    <entry>
+      <int>3</int>
+      <org.jenkinsci.plugins.ghprb.GhprbPullRequest>
+        <id>3</id>
+        <updated>2017-07-07 13:05:12.0 UTC</updated>
+        <head>b03c4bb63b2daf72904b1931b1336f3fbd149cf3</head>
+        <base>42ab5f9ddbe17fb2d6ccbfcfb9b95cbc7076e6a5</base>
+        <accepted>false</accepted>
+      </org.jenkinsci.plugins.ghprb.GhprbPullRequest>
+    </entry>
+    <entry>
+      <int>4</int>
+      <org.jenkinsci.plugins.ghprb.GhprbPullRequest>
+        <id>4</id>
+        <updated>2017-07-05 13:40:22.0 UTC</updated>
+        <head>77713b889e7f6b1a14cf0fddf99ba23ce2c8ee32</head>
+        <base>42ab5f9ddbe17fb2d6ccbfcfb9b95cbc7076e6a5</base>
+        <accepted>false</accepted>
+      </org.jenkinsci.plugins.ghprb.GhprbPullRequest>
+    </entry>
+  </pullRequests>
+</org.jenkinsci.plugins.ghprb.GhprbRepository>

@@ -1,0 +1,34 @@
+Started by an SCM change
+Building in workspace /var/lib/jenkins/workspace/jenkinsBuild (copy)
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Done
+Cloning the remote Git repository
+Cloning repository https://github.com/lodykas/openjenweekins.git
+ > git init /var/lib/jenkins/workspace/jenkinsBuild (copy) # timeout=10
+Fetching upstream changes from https://github.com/lodykas/openjenweekins.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/lodykas/openjenweekins.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/lodykas/openjenweekins.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/lodykas/openjenweekins.git # timeout=10
+Fetching upstream changes from https://github.com/lodykas/openjenweekins.git
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/lodykas/openjenweekins.git +refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*
+Seen branch in repository origin/Démonstration
+Seen branch in repository origin/master
+Seen 2 remote branches
+ > git tag -l # timeout=10
+Multiple candidate revisions
+Scheduling another build to catch up with jenkinsBuild (copy)
+Checking out Revision 191585fe64ad624271d630967756560ce5fd164b (origin/master)
+Commit message: "Merge pull request #17 from lodykas/jenkinsDemo"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 191585fe64ad624271d630967756560ce5fd164b
+First time build. Skipping changelog.
+[jenkinsBuild (copy)] $ /bin/sh -xe /tmp/jenkins1637606335845866142.sh
++ git clone https://github.com/OpenWeek/jenkins-java-bac-1.git
+Cloning into 'jenkins-java-bac-1'...
++ sh -x /var/lib/jenkins/workspace/jenkinsBuild (copy)/jenkins-java-bac-1/Scripts/script.sh
+[Set GitHub commit status (universal)] SUCCESS on repos [] (sha:191585f) with context:jenkinsBuild (copy)
+Finished: SUCCESS

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.ghprb.GhprbRepository plugin="ghprb@1.38.0">
+  <reponame>lodykas/openjenweekins</reponame>
+  <pullRequests class="concurrent-hash-map">
+    <entry>
+      <int>18</int>
+      <org.jenkinsci.plugins.ghprb.GhprbPullRequest>
+        <id>18</id>
+        <updated>2017-07-07 14:10:20.0 UTC</updated>
+        <head>6c4d7954749508fef45587aff16c39a64422ddc0</head>
+        <base>191585fe64ad624271d630967756560ce5fd164b</base>
+        <accepted>true</accepted>
+        <lastBuildId>103</lastBuildId>
+      </org.jenkinsci.plugins.ghprb.GhprbPullRequest>
+    </entry>
+  </pullRequests>
+</org.jenkinsci.plugins.ghprb.GhprbRepository>

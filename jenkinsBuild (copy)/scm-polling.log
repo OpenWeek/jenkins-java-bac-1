@@ -1,0 +1,27 @@
+Started on Jul 5, 2017 11:50:43 AM
+Polling SCM changes on master
+Using strategy: Default
+[poll] Last Built Revision: Revision 6e7e0bf205d9960e7e852f3a2773e924f3fd1e41 (origin/master)
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/lodykas/openjenweekins.git # timeout=10
+Fetching upstream changes from https://github.com/lodykas/openjenweekins.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/lodykas/openjenweekins.git +refs/pull/*:refs/remotes/origin/pr/*
+Polling for changes in
+Seen branch in repository origin/master
+Seen branch in repository origin/pr/1/head
+Seen branch in repository origin/pr/2/head
+Seen branch in repository origin/pr/2/merge
+Seen branch in repository origin/pr/3/head
+Seen branch in repository origin/pr/3/merge
+Seen branch in repository origin/pr/4/head
+Seen branch in repository origin/pr/4/merge
+Seen branch in repository origin/pr/5/head
+Seen branch in repository origin/pr/5/merge
+Seen branch in repository origin/pr/6/head
+Seen 11 remote branches
+ > git tag -l # timeout=10
+Done. Took 0.74 sec
+No changes
